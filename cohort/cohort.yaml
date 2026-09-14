@@ -1,0 +1,12 @@
+title: "Prompt to Judgement — Builders"
+subtitle: "Twelve weeks, four modules. Do it by hand first, then delegate it, then find out what you forgot to ask for."
+book: "prompt-to-academy"
+book_title: "Prompt to Judgement"
+session_count: 12
+session_length_hours: 2.5
+cohort_size_min: 8
+cohort_size_max: 12
+format: "live, synchronous — weekly, plus one intensive weekend per module"
+prerequisite: "none; ages 13–15"
+sessions_file: "sessions.yaml"
+rubric_file: "rubric.yaml"

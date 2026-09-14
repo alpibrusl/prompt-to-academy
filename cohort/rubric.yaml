@@ -1,0 +1,82 @@
+scale:
+  levels: ["Not yet", "Meets the bar", "Exemplary"]
+  pass_level: "Meets the bar"
+  all_dimensions: true
+
+dimensions:
+  - name: "The spec"
+    description: >-
+      What was asked for, and whether "done" was defined before anything was
+      built. Graded on the specification, not on the thing it produced.
+    levels:
+      Not yet: >-
+        The request is a topic rather than a specification. "Done" is not
+        defined, or is defined in a way that cannot be checked.
+      Meets the bar: >-
+        States what done means in checkable terms, names at least one
+        ambiguity it deliberately resolved, and says what was left out.
+      Exemplary: >-
+        Also anticipates a result that would satisfy every stated requirement
+        and still be unusable, and specifies against it.
+
+  - name: "The check"
+    description: >-
+      What was verified, how, and whether the method could have found a
+      problem if one had been there.
+    levels:
+      Not yet: >-
+        Checking is "it looked right", or the method was only ever run on the
+        real data with no case whose answer was known in advance.
+      Meets the bar: >-
+        A known-answer case was built before the real run, its expected
+        answer written down first, and it contains something awkward rather
+        than only the easy situation.
+      Exemplary: >-
+        Also a case that should fail, and it does — the method says "no" or
+        "not enough information" where it should, instead of answering
+        confidently.
+
+  - name: "Honesty about what was not checked"
+    description: >-
+      Whether the gaps are stated plainly, in the record, at the time. The
+      dimension that cannot be compensated for by anything else.
+    levels:
+      Not yet: >-
+        Unverified claims are presented as verified, or the record is silent
+        about coverage, or it was written afterwards from memory.
+      Meets the bar: >-
+        The trace says what was checked and what was not, specifically, and
+        was filled in while working rather than reconstructed.
+      Exemplary: >-
+        Also says why the line was drawn where it was, and names the
+        assumption that made it seem safe.
+
+  - name: "What did I forget to specify"
+    description: >-
+      Whether the recurring question is actually asked — of one's own work,
+      unprompted, after the result comes back clean.
+    levels:
+      Not yet: >-
+        Verification stops when the stated requirements are met. The question
+        is asked only when an adult asks it.
+      Meets the bar: >-
+        Finds at least one decision the agent made that was never specified,
+        and can say where in their own words the instructions ran out.
+      Exemplary: >-
+        Identifies a class of omission they personally repeat, from their own
+        trace record, and checks for it first.
+
+  - name: "Answering for it"
+    description: >-
+      Whether they can account, out loud and under questioning, for work they
+      delegated — including when it failed.
+    levels:
+      Not yet: >-
+        Responsibility is placed on the tool, or the account changes under a
+        follow-up question, or a decision turns out to have nothing behind it.
+      Meets the bar: >-
+        Says what happened, what was checked, what was not, and what changes
+        now — without softening, and without blaming the tool.
+      Exemplary: >-
+        Also answers a question they could not have prepared for, and says "I
+        don't know" where that is the true answer.

@@ -1,0 +1,696 @@
+sessions:
+
+  # ---------------- Module 1 — The spec is the work ----------------
+
+  - number: 1
+    title: "What you actually asked for"
+    module: "The spec is the work"
+    chapters: [1, 2]
+    chapter_titles: ["Doing Became Optional", "The Spec Is the Work"]
+    ai_mode: "none"
+    by_hand: >-
+      Read `brief-01-shelf.md`. On paper, in fifteen minutes, write
+      instructions for it. Then hand them to someone who will follow them
+      exactly and will not ask you a single question. Watch what they build.
+    in_session: >-
+      Pairs swap specifications and build from them in silence — no talking,
+      no clarifying, no gestures. Twenty minutes. Then everyone looks at what
+      came back and the room reads out the funniest failure. The laughter is
+      the lesson landing; do not rush past it.
+    solo: >-
+      Write the spec, put it away for a day, then follow it yourself
+      literally — doing only what it says, resolving nothing from memory. The
+      day's gap is what stops you reading your intention instead of your
+      sentence.
+    at_home: >-
+      The child writes the spec and the adult builds from it, in silence,
+      being as exact and unhelpful as possible. Then swap: the adult writes
+      one and the child builds. The second round is where it really lands,
+      because the child has just learned what to exploit.
+    parent_notes: >-
+      Your job is to be exact, not to be kind. When the spec says "put the
+      books in order", pick an order it did not specify — by colour, by
+      thickness — and commit to it. Then ask "where did I go wrong?" and let
+      them find it in their own sentence.
+      A good answer points at a specific word. A bad one is "you knew what I
+      meant", which is the misconception the whole course exists to dismantle
+      — so when you hear it, say "I did, and the machine won't" and move on.
+      The one thing not to do is help while building. The instant you use
+      what you know they meant, the exercise has taught nothing.
+    exercise:
+      name: "Build it blind"
+      description: >-
+        Build exactly what your partner's specification says, resolving every
+        ambiguity in the least helpful way that is still honest. Keep a note
+        of every decision you had to make for them.
+      verify: >-
+        A specification can be followed perfectly and produce something
+        nobody wanted. The usual tell in this exercise is that nobody
+        specified how a book gets **onto** the list in the first place —
+        every spec describes the shelf's states and none describes how it is
+        populated. Almost no first draft catches this.
+      fixture_ref: "fixture/brief-01-shelf.md"
+    checkpoint: >-
+      Can point at the exact words in their own specification where a
+      decision was left open, and say what should have been written instead.
+    facilitator_notes: >-
+      The silence rule is the whole exercise and it will be broken within
+      four minutes. Enforce it loudly the first time and it holds after that.
+      Budget fifteen minutes more than feels necessary — the first session of
+      any cohort in this series runs long.
+      Resist the urge to introduce AI today. It is session one, the agent is
+      off, and a child who leaves having learned only "words are slippery"
+      has had a successful evening.
+
+  - number: 2
+    title: "The same spec, to a machine"
+    module: "The spec is the work"
+    chapters: [3]
+    chapter_titles: ["The Same Spec, to a Machine"]
+    ai_mode: "answer"
+    by_hand: >-
+      Before the agent is unlocked: rewrite last week's specification, alone,
+      on paper, in ten minutes. Then write down — in advance — the three
+      places you predict a machine will make a decision you did not make.
+      Fold the paper. It gets opened at the end.
+    in_session: >-
+      Everyone hands their *original* specification — unchanged, not the
+      rewrite — to an agent, and reads what comes back. Then the room
+      compares against what their human partner built from the same words
+      last week. The machine's version is usually better, and that is the
+      uncomfortable part of the session rather than a problem with it.
+    solo: >-
+      Run both versions yourself — the original and the rewrite — and diff
+      the two outputs rather than the two specs. The difference in results is
+      easier to see than the difference in wording.
+    at_home: >-
+      Run the original spec through an agent together, then open the folded
+      prediction sheet and score it. Three predictions, how many landed. Do
+      it as a game with an actual tally, not as a discussion.
+    parent_notes: >-
+      Ask: "what did it decide that you never told it?" — and keep asking
+      until they point at something specific in the output.
+      A good answer names a choice and the missing sentence that would have
+      prevented it. A bad answer evaluates the output ("it's good", "it's
+      wrong") — that is a review, not the question. Push back once with "I'm
+      not asking if it's good, I'm asking what it chose."
+      Do not help them find it, and do not look first yourself. If you find
+      it before they do you will telegraph it, and this is the session where
+      they need the experience of searching their own words.
+    exercise:
+      name: "Find the silent decisions"
+      description: >-
+        Against the agent's output, list every decision it made that your
+        specification did not make. Then mark which of them you would have
+        got wrong too.
+      verify: >-
+        Use `agent-output-01.md` if the day's output is too clean. Everything
+        it claims is true and every listed test passes — and nothing stops a
+        person marking a book returned while it is still in their bag, and
+        two people taking the last copy at once is undefined. The tests
+        checked what was asked.
+      fixture_ref: "fixture/agent-output-01.md"
+    checkpoint: >-
+      Produces a written list of at least three decisions the agent made
+      silently, each tied to a specific gap in their own words.
+    facilitator_notes: >-
+      This is the first session with answer mode unlocked. Say so explicitly,
+      say why it is unlocked today and was not last week, and make the
+      calculator comparison out loud — it is the mental model that makes the
+      rest of the term's unlocks feel like a rule rather than a mood.
+      The trace sheet starts today. Every delegation from now on gets one.
+
+  - number: 3
+    title: "Make it compute, not guess"
+    module: "The spec is the work"
+    chapters: [4]
+    chapter_titles: ["Make It Compute, Not Guess"]
+    ai_mode: "answer"
+    by_hand: >-
+      `bill.md`, on paper, alone, before anything is typed. Write your answer
+      down and commit to it — including who absorbs the rounding difference,
+      which the brief does not say.
+    in_session: >-
+      Three columns on the board: what the room worked out by hand, what an
+      agent says in prose, and what a program it writes actually outputs when
+      run. Fill the columns in that order and discuss only once all three are
+      up.
+    solo: >-
+      Do all three yourself and write the three answers side by side before
+      reconciling them. Reconciling as you go lets the last answer quietly
+      become the right one.
+    at_home: >-
+      Both of you do the bill on paper separately first — the adult too, no
+      exceptions — then compare with each other before comparing with the
+      machine. Two people disagreeing about the rounding is the best possible
+      start to this session.
+    parent_notes: >-
+      Ask: "did you see it run, or did it tell you what it would say?" This
+      is the one factual thing you need to be able to check, and you can
+      check it without understanding any of the code — either output appeared
+      or it did not.
+      A good answer distinguishes the two. A bad one is "it said the code
+      gives 14.20" — that is prose wearing a costume, and it is the specific
+      failure this session exists to catch.
+      Do not do the arithmetic for them, even when they are stuck and it is
+      late. Being stuck on the rounding is the session working.
+    exercise:
+      name: "Prose against program"
+      description: >-
+        Get the same number three ways — by hand, from prose, and from code
+        you watched run. Where any two disagree, find out which is wrong and
+        why before moving on.
+      verify: >-
+        An agent will sometimes write correct code and then report what it
+        "would" produce without running it. The number is usually right,
+        which is what makes the habit so hard to break. If no output was
+        shown, it was not computed — and on this bill the rounding is exactly
+        where an unrun program and a run one part company.
+      fixture_ref: "fixture/bill.md"
+    checkpoint: >-
+      States the rule unprompted — anything past retrieval gets code, and the
+      output shown — and can say what "shown" means and why it matters.
+    facilitator_notes: >-
+      This is a choice session for the pilot's fourth measure. Offer both
+      forms of the exercise — hand-done first, or agent from the start —
+      privately, and react to neither. Record only the count.
+      The rounding has no correct answer, which some children find
+      intolerable. That intolerance is worth naming out loud: specifications
+      run out, somebody decides, and the decision should be written down
+      rather than discovered later.
+
+  # ---------------- Module 2 — The known-answer test ----------------
+
+  - number: 4
+    title: "A case you already know"
+    module: "The known-answer test"
+    chapters: [5]
+    chapter_titles: ["A Case You Already Know"]
+    ai_mode: "none"
+    by_hand: >-
+      Invent five rows of data — made up, awkward on purpose, no round
+      numbers — and work out by hand what the average should be. Write the
+      answer down before anything else happens. The paper is the whole point
+      of the session.
+    in_session: >-
+      Everyone builds a five-row case and swaps it with a neighbour, who
+      predicts the answer independently before seeing the original
+      prediction. The disagreements are collected on the board. Each one is a
+      misunderstanding that would otherwise have passed silently through a
+      test.
+    solo: >-
+      Build the case, write the expected answer, then put it away and rebuild
+      the expectation from scratch tomorrow before checking. With nobody to
+      disagree with you, a day is the cheapest substitute.
+    at_home: >-
+      Each of you builds a five-row case and predicts the other's answer
+      before being told it. Where the two predictions differ, neither of you
+      may look anything up until you have found out why.
+    parent_notes: >-
+      Ask: "what would have to be true for this method to be wrong in a way
+      that matters?" — and then "is that in your five rows?"
+      A good answer names a specific awkward case: a blank, a duplicate, a
+      negative number. A bad answer describes the easy situation in more
+      detail, which is the most common failure and does not feel like one.
+      Do not supply the awkward case. If you name it, they have tested your
+      imagination rather than theirs, and the exercise measures nothing.
+    exercise:
+      name: "Five rows and a pencil"
+      description: >-
+        Build a known-answer case small enough to compute by hand, chosen not
+        found, containing the thing you are actually afraid of.
+      verify: >-
+        A case built entirely of round numbers passes even when the method
+        multiplies where it should divide. If every value is 10, almost any
+        error is invisible — so a "passing" test here is often a test that
+        could not have failed.
+    checkpoint: >-
+      Produces a five-row case, an expected answer written before any run,
+      and can say which awkward thing the case deliberately contains.
+    facilitator_notes: >-
+      No agent today, and children who have had two sessions of answer mode
+      will push on this. Hold it. The whole point is that the toy case is
+      built by a person who knows what the answer should be, and that is the
+      half that cannot be delegated.
+      Watch for realistic-looking cases. Realistic is the enemy here — it
+      means they cannot compute the answer, which puts them back on "looks
+      right".
+
+  - number: 5
+    title: "Running it on the toy"
+    module: "The known-answer test"
+    chapters: [6]
+    chapter_titles: ["Running It on the Toy"]
+    ai_mode: "answer"
+    by_hand: >-
+      Before any code runs: open `attendance.csv`, count the rows by eye, and
+      write down what you expect the average age of a room of 13-to-15 year
+      olds to be. One number. Committed to, in ink.
+    in_session: >-
+      The four outcomes on the board — it agrees, it disagrees and the method
+      is wrong, it disagrees and you are wrong, you are both wrong — and
+      every pair has to place their result in one of the four and defend the
+      placement.
+    solo: >-
+      Work the four outcomes explicitly, in writing, rather than in your
+      head. The fourth one is invisible from the inside, so write down *why*
+      you expected what you expected, not just what.
+    at_home: >-
+      Both write down the expected average age before opening anything. Then
+      let the agent compute it. The number that comes back is 40.38, and the
+      job is to sit with that for a minute before either of you explains it.
+    parent_notes: >-
+      You do not need to understand the file. Ask: "does that number make
+      sense for a room of fourteen-year-olds?" — and then, when they say no,
+      "so what is in there that shouldn't be?"
+      A good answer goes looking in the data. A bad one adjusts the method
+      until the number looks nicer, which produces a right answer for a wrong
+      reason and is worth catching now.
+      Do not tell them about the 999 or the blank. Finding them is the
+      session.
+    exercise:
+      name: "The number that cannot be right"
+      description: >-
+        Compute the average age from `attendance.csv`, notice it is
+        impossible, and find every reason why — the blank, the 999, the
+        duplicated submission, and the two date formats nobody asked about.
+      verify: >-
+        The honest mean is 14.14; the naive one is 40.38. But a child who
+        strips the 999 and the blank and stops there still has a duplicate
+        row inflating one student's weight, and the answer they get looks
+        entirely reasonable. A plausible wrong answer is harder to catch than
+        an absurd one.
+      fixture_ref: "fixture/attendance.csv"
+    checkpoint: >-
+      Has run the method on their own toy case before the real data, and can
+      name which of the four outcomes they got.
+    facilitator_notes: >-
+      40.38 is loud and will be caught in seconds. The duplicate row is the
+      real exercise and is usually missed — do not point it out. Let a pair
+      present a "clean" answer of about 14.2 and then ask how many rows they
+      ended up with. Thirty-seven, not thirty-six.
+      If nobody finds the duplicate, that is the honest result of the
+      session. Say so rather than rescuing it.
+
+  - number: 6
+    title: "When the toy passes anyway"
+    module: "The known-answer test"
+    chapters: [7]
+    chapter_titles: ["When the Toy Passes Anyway"]
+    ai_mode: "answer"
+    by_hand: >-
+      Take last week's cleaned attendance figure and, by hand, write the five
+      questions from the chapter against it — did I look at the data, would
+      this change at scale, is this too good, am I measuring what I meant,
+      has the situation changed. Answer all five in writing before touching
+      anything.
+    in_session: >-
+      A live walk through one dataset the facilitator brings from their own
+      working life, with the five questions applied out loud, including at
+      least one the facilitator genuinely does not know the answer to.
+    solo: >-
+      Apply the five questions to something you produced earlier in the
+      course and had considered finished. The discomfort is the mechanism.
+    at_home: >-
+      Apply the five questions to a number the household actually uses — a
+      monthly bill, a screen-time figure, a fitness app's weekly total. Real
+      stakes make the fourth question land properly.
+    parent_notes: >-
+      The one to press on is "are you measuring what you meant, or what you
+      could count?" It is the most useful question in this entire course and
+      the least technical, and you can ask it about anything.
+      A good answer names the gap between the two — "I wanted to know if
+      people liked it, I measured how long they stayed." A bad one insists
+      there is no gap; there is always a gap, so ask what it is rather than
+      whether it exists.
+      Pick your own example honestly. If you use a work metric you defend at
+      the office, you will argue for it, and they will learn that adults
+      exempt themselves.
+    exercise:
+      name: "The five questions, on your own work"
+      description: >-
+        Run the five questions against a result you already believed, and
+        write down which one changed your confidence and by how much.
+      verify: >-
+        Every one of the five questions can be answered "yes, fine" without
+        looking at anything. A child who answers all five from memory in
+        ninety seconds has performed the check rather than run it — the tell
+        is that nothing was reopened.
+      fixture_ref: "fixture/attendance.csv"
+    checkpoint: >-
+      Names one thing they previously believed that they now hold less
+      confidently, and can say which question did it.
+    facilitator_notes: >-
+      Bring something real and unresolved from your own work. This session
+      depends entirely on the children watching an adult they respect say "I
+      don't actually know if this number is right" — that modelling is the
+      content, and a tidy worked example destroys it.
+      This is the mid-point. If the trace sheets are being filled in
+      afterwards from memory rather than during, correct it now; by module
+      four it is unfixable.
+
+  # ---------------- Module 3 — Comparing fairly ----------------
+
+  - number: 7
+    title: "Two versions and a coin"
+    module: "Comparing fairly"
+    chapters: [8]
+    chapter_titles: ["Two Versions and a Coin"]
+    ai_mode: "none"
+    by_hand: >-
+      Forty coin flips, recorded in two columns, by hand. You know the coin
+      is fair. Write down the biggest gap you saw. Do it twice more and keep
+      all three numbers — this is your personal sense of what luck looks
+      like, and nothing else in the course replaces it.
+    in_session: >-
+      The cohort runs one real A/B test on itself — two versions of a sign-up
+      sheet, a poster, a snack — with the assignment decided by an actual
+      coin, flipped in the room, per person. Both versions run at the same
+      time, which is the entire methodological point and is much harder to
+      arrange than it sounds.
+    solo: >-
+      Run the coin-flip tally, then design an A/B test you could actually run
+      on people you know, and write the plan in advance including the number
+      of observations. Writing the plan is most of the value even unrun.
+    at_home: >-
+      Run a real one at home over a week — two versions of a note on the
+      fridge, two ways of asking for something — with a coin deciding each
+      time. Small, real, and with an outcome somebody cares about.
+    parent_notes: >-
+      Before any result: "how many are you going to collect, and what would
+      change your mind?" Get both written down where neither of you can edit
+      them. A photo on a phone is fine.
+      A good answer is a number and a threshold. A bad answer is "we'll see
+      how it goes", which is the thing that makes next week's session
+      possible — so let it happen once if it does, and keep the note.
+      Do not let the plan be revised once results start arriving, including
+      by you. You will want to. That wanting is exactly what the children are
+      about to study.
+    exercise:
+      name: "The coin does the thinking"
+      description: >-
+        Run a real comparison where a coin assigns each person, both versions
+        run simultaneously, and the stopping rule is written down first.
+      verify: >-
+        A test can be perfectly randomised and still answer the wrong
+        question, because the two versions differ in more than one way at
+        once. If version B is both differently worded and differently
+        coloured, a difference tells you nothing about which change did it.
+    checkpoint: >-
+      Can say, unprompted, why running the two versions on different days
+      does not answer the question — and what the coin is actually doing.
+    facilitator_notes: >-
+      The forty flips by hand will be resented and must not be skipped or
+      simulated. The entire next session rests on the children having a
+      personal, physical sense of how far a fair coin wanders, and a printed
+      table of what luck looks like does not produce it.
+      Second of the three choice sessions for the pilot's fourth measure.
+      Offer both forms, react to neither, record only the count.
+
+  - number: 8
+    title: "The number that moves when you watch it"
+    module: "Comparing fairly"
+    chapters: [9]
+    chapter_titles: ["The Number That Moves When You Watch It"]
+    ai_mode: "tutor"
+    by_hand: >-
+      Open `ab_test_log.csv` and tally the first 160 trials by hand, in two
+      columns, no tools. Stop there — as you would in real life, because it
+      looks decided. Write down your conclusion and how confident you are.
+    in_session: >-
+      The room announces its conclusions from the first 160 trials, publicly
+      and with confidence, and the facilitator writes them on the board. Then
+      the remaining 240 trials go up. Then the fact that both variants were
+      generated from the same 25% chance. Let the silence happen.
+    solo: >-
+      Do the 160-trial tally and commit your conclusion in writing before
+      reading on. Reading ahead first makes this session completely
+      inert — there is no version of it that works if you already know.
+    at_home: >-
+      Do the first tally together and let the child talk you into the
+      conclusion. Be convinced. Then run the rest. Being convinced first, out
+      loud, is what makes the reveal land on both of you.
+    parent_notes: >-
+      Let them persuade you at 160 trials, genuinely. Then, after the reveal,
+      ask the only question that matters: "what would have stopped us?"
+      A good answer is "deciding how many to collect before starting." A bad
+      answer blames the data or calls it a trick — it is not a trick, every
+      number in the file is real, and the conclusion was drawn honestly from
+      real data. That is precisely why it matters.
+      Do not read this note's numbers out early. If you reveal that the
+      variants are identical before they have committed to a conclusion, the
+      session is spent.
+    exercise:
+      name: "Peek, commit, then look"
+      description: >-
+        Draw a confident conclusion from a partial dataset, in writing, in
+        front of other people — then see the full data and the fact that
+        there was never any effect at all.
+      verify: >-
+        Stopping at trial 160 gives A at 16.5% against B at 41.3%, z ≈ 3.49 —
+        a result most adults would publish. All 400 trials give 27.1% against
+        32.4%, z ≈ 1.15. Nothing was fabricated and nobody analysed anything
+        incorrectly; the only error was letting the data decide when to stop
+        looking.
+      fixture_ref: "fixture/ab_test_log.csv"
+    checkpoint: >-
+      Can explain, without the word "significant", why stopping when the
+      result looks good breaks the result.
+    facilitator_notes: >-
+      Do not soften the reveal and do not let anyone save face. The
+      embarrassment is the mechanism and it is the most durable thing in the
+      twelve weeks — children who have been publicly wrong about this once
+      never peek casually again.
+      Tutor mode today, deliberately. An agent in answer mode will explain
+      optional stopping in a paragraph and the experience is lost.
+      Have the holdout ready as the closing five minutes: set aside part of
+      the data, touch nothing, test at the end. It is the cheapest insurance
+      in the course.
+
+  - number: 9
+    title: "A chart is a claim"
+    module: "Comparing fairly"
+    chapters: [10]
+    chapter_titles: ["A Chart Is a Claim"]
+    ai_mode: "answer"
+    by_hand: >-
+      From `chart-brief.md`, draw all three charts by hand on paper — the one
+      that proves the claim, the one that disproves it, and the one you would
+      defend. Rulers, not screens. Drawing the dishonest one yourself is the
+      part that teaches.
+    in_session: >-
+      All three versions go on the wall and the room votes on which is
+      fairest, then argues. The argument has no right answer and is not meant
+      to reach one; the facilitator's job is to keep it on "what will a
+      reader take away" rather than "what is technically accurate".
+    solo: >-
+      Draw all three, then leave them a day and pick the fairest before
+      reading your own reasoning from yesterday. Your own argument is
+      persuasive to you in a way it will not be tomorrow.
+    at_home: >-
+      Draw the three charts separately, then each of you picks the fairest
+      and has to argue the other person's choice back to them convincingly
+      before defending your own.
+    parent_notes: >-
+      Ask: "what will someone take away from this in three seconds, and is
+      that true?" That is the whole skill and it needs no numeracy at all.
+      A good answer separates what the chart shows from what a reader will
+      conclude. A bad answer defends technical accuracy — "but all the
+      numbers are correct" — which is true of every misleading chart ever
+      made, so accept it and ask the question again.
+      Do not tell them about July and August being holidays. Finding the
+      school calendar inside the data is the best moment available in this
+      session.
+    exercise:
+      name: "Three honest charts"
+      description: >-
+        One dataset, three truthful charts, three different impressions — and
+        a written defence of the third.
+      verify: >-
+        "Always start at zero" is the rule everyone leaves this session with,
+        and on this data it is wrong. The real year-on-year change is about
+        2%, consistent and genuine, and an axis at zero hides it completely.
+        A child who applies the rule mechanically produces an honest chart
+        that conceals the actual finding.
+      fixture_ref: "fixture/chart-brief.md"
+    checkpoint: >-
+      Can name a chart choice that is technically accurate and misleading,
+      and say who it misleads and how.
+    facilitator_notes: >-
+      By hand, on paper, with rulers. A child who asks an agent to draw three
+      charts gets three charts and learns nothing, because the choices are
+      made by the tool and never surface as choices.
+      The zero-axis trap is the most valuable five minutes here. Wait for
+      someone to state the rule as absolute, then hand them the 2% finding
+      and let them work out that their honest chart hid it.
+
+  # ---------------- Module 4 — Answering for it ----------------
+
+  - number: 10
+    title: "Right, and still wrong"
+    module: "Answering for it"
+    chapters: [11]
+    chapter_titles: ["Right, and Still Wrong"]
+    ai_mode: "answer"
+    by_hand: >-
+      Write the specification for "what is our average delivery time?" —
+      properly, with what done means and one way it could be satisfied and
+      still be wrong — before opening either data file.
+    in_session: >-
+      The room computes the average from `deliveries.csv`, agrees on 3.28
+      days, and then somebody is asked to count the rows in `orders.csv`. Two
+      hundred orders. A hundred and sixty-nine deliveries. Sit with the
+      thirty-one.
+    solo: >-
+      Write the spec, compute the answer, and only then open the second file.
+      Opening both at once removes the entire experience.
+    at_home: >-
+      Do it in that order together — spec, then deliveries, then the
+      agreement that 3.28 is the answer, and only then orders.csv. The order
+      is the session; there is nothing left if the files are opened together.
+    parent_notes: >-
+      Ask: "what isn't in this data?" — and hold the silence, because it is a
+      genuinely hard question and the first answer is usually nothing.
+      A good answer is "the orders that never arrived have no row anywhere."
+      A bad answer looks for a mistake inside the numbers; there is no
+      mistake inside the numbers, every value is correct, and that is what
+      makes this the hardest session in the course.
+      Do not mention the second file until they have committed to 3.28. If
+      you hint, you have removed the only thing this session does.
+    exercise:
+      name: "The rows that are not there"
+      description: >-
+        Answer a question correctly from the data you were given, then find
+        out that the data could not have answered it.
+      verify: >-
+        Every number in `deliveries.csv` is accurate and the mean of 3.28
+        days is correctly computed. It is the mean delivery time of the
+        deliveries that happened. Thirty-one orders never arrived and no row
+        anywhere records them — a dataset never announces what is absent from
+        it, and no amount of checking the file can find a row that is not in
+        it.
+      fixture_ref: "fixture/orders.csv"
+    checkpoint: >-
+      States the recurring question in their own words, and can give an
+      example from their own trace record of a time it applied to them.
+    facilitator_notes: >-
+      Third and last of the choice sessions for the pilot's fourth measure.
+      Offer both forms, react to neither, record only the count.
+      This is the session the course is named after and it is the one most
+      likely to be rushed, because it looks like a repeat of session 5. It is
+      not: session 5 is a wrong number that looks wrong, this is a right
+      number that is the answer to a question nobody asked.
+      Have the children re-read their own trace sheets from week 2 onward
+      today. The personal pattern is visible by now and finding it themselves
+      is worth more than any feedback you could give.
+
+  - number: 11
+    title: "Signing your name"
+    module: "Answering for it"
+    chapters: [12]
+    chapter_titles: ["Signing Your Name"]
+    ai_mode: "tutor"
+    by_hand: >-
+      Pick something you delegated earlier in the term that you would now
+      describe as finished. Write the five-part account for it — what
+      happened, what you checked, what you did not, why the line was there,
+      what changes — from your trace sheets rather than from memory. No
+      tools.
+    in_session: >-
+      Staged failures. Each child's earlier work is broken by the facilitator
+      in a way they were not warned about, live, and they give the account
+      standing up while the room asks follow-up questions. Fifteen minutes
+      each, no preparation time.
+    solo: >-
+      Write the account, then record yourself giving it out loud and watch it
+      back. The places you hesitate are the decisions with nothing behind
+      them, and they are invisible on the page.
+    at_home: >-
+      The child gives the account standing up, to you, as if to a stranger
+      who was relying on the thing. You ask questions until something is not
+      defensible — and something will be.
+    parent_notes: >-
+      Your only question, repeated in different forms, is "how do you know?"
+      You do not need to be able to judge whether the work is correct to
+      judge whether the answer to that question is any good.
+      A good answer points at something specific that was checked, and says
+      plainly where the checking stopped. A bad one restates the finding more
+      confidently, or blames the tool — "the AI did it" is the one response
+      to push back on every single time, because it is the habit that has to
+      not form.
+      Praise the "I didn't check that" out loud when it comes. It will feel
+      like rewarding a failure. It is the entire objective of the course, and
+      children will only say it if saying it has been safe before.
+    exercise:
+      name: "It broke in front of someone"
+      description: >-
+        Account for a failure in delegated work, out loud, under questioning
+        you could not prepare for — what happened, what was checked, what was
+        not, why, and what changes.
+      verify: >-
+        A fluent, well-structured account can be an evasion. The tell is that
+        it never names anything that was not checked — an account with no
+        gaps in it is describing a piece of work that does not exist, and the
+        follow-up question to ask is simply "what didn't you check?"
+      fixture_ref: "fixture/trace-sheet.md"
+    checkpoint: >-
+      Gives an account that names something they did not check, without being
+      asked for it and without being prompted.
+    facilitator_notes: >-
+      Break something real of theirs, without warning, and do not apologise
+      for it. The point cannot be reached by discussing hypotheticals.
+      Tutor mode, and no agent during the accounts at all.
+      Watch for the fluent evader — the child who gives a beautifully
+      structured account that never admits a gap. That is the failure mode
+      this session exists to surface, and it usually belongs to the most
+      articulate child in the room.
+
+  - number: 12
+    title: "Capstone — defend it"
+    module: "Answering for it"
+    chapters: [1]
+    chapter_titles: ["Doing Became Optional"]
+    ai_mode: "answer"
+    by_hand: >-
+      The capstone's specification, its definition of done, and its
+      known-answer cases are written unaided, in the room, before any
+      delegation is permitted.
+    in_session: >-
+      Each child presents to an external panel — practitioners from outside
+      the academy — and defends under questioning. The trace record is
+      submitted with the work and the panel reads it.
+    solo: >-
+      Present to two people who were not part of the course and have no
+      reason to be kind, and give them the rubric in advance.
+    at_home: >-
+      Find a real external audience — a relative, a neighbour, a teacher,
+      anyone outside the household — and have the child present and defend to
+      them, with the rubric in their hands. The stranger is not optional; you
+      have become an insider over twelve weeks.
+    parent_notes: >-
+      You are not the panel today. Your job is to find someone who is, hand
+      them the rubric beforehand, and then stay quiet during the defence —
+      genuinely quiet, including not clarifying on your child's behalf.
+      What you are listening for is whether they can say "I don't know" and
+      whether they volunteer what they did not check. Those two things are
+      what the entire twelve weeks was for; everything else on the rubric is
+      downstream of them.
+      Afterwards, ask what they would do differently rather than how it went.
+    checkpoint: >-
+      Defends the work under questioning from someone who was not there,
+      including at least one question they could not have prepared for.
+    capstone: true
+    deliverable: >-
+      Something real that someone outside the cohort actually uses, delivered
+      with its specification, its known-answer cases, and the full trace
+      record of every delegation — what was asked, what came back, what was
+      checked, and what was not.
+    facilitator_notes: >-
+      Source the external panel in week 8, not week 11. Practitioners who
+      have shipped things and been wrong in public are the ones worth having,
+      and they are booked up.
+      Run the pilot's first two measures again today, same instrument as
+      session 1, scored by someone blind to which sitting they are marking.
+      The rubric's third dimension — honesty about what was not checked — is
+      the one to weight in the panel briefing. Everything else can be
+      coached; that one cannot, and it is the actual outcome.

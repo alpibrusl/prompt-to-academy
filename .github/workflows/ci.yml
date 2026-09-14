@@ -1,0 +1,34 @@
+name: ci
+
+on:
+  push:
+    branches: ["**"]
+  pull_request:
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Install the toolchain
+        run: |
+          pip install "content-kit-core @ git+https://github.com/alpibrusl/content-kit@main#subdirectory=packages/core"
+          pip install "cohortkit @ git+https://github.com/alpibrusl/cohort-kit@main"
+
+      - name: Check the curriculum against the book
+        run: cohortkit check cohort --book-path .
+
+      - name: Build every document
+        run: |
+          cohortkit build cohort --out build --book-path .
+          cohortkit build cohort --out build --book-path . --home
+          cohortkit build cohort --out build --book-path . --self-paced
+
+      - uses: actions/upload-artifact@v4
+        with:
+          name: documents
+          path: build/

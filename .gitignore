@@ -1,0 +1,5 @@
+build/
+*.epub
+*.pdf
+__pycache__/
+.venv/
