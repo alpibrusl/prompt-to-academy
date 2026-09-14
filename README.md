@@ -18,7 +18,10 @@ artifact. The curriculum is three YAML files; the handout is an artifact.
 
 ```bash
 pip install "content-kit-core @ git+https://github.com/alpibrusl/content-kit@main#subdirectory=packages/core"
-pip install "cohortkit @ git+https://github.com/alpibrusl/cohort-kit@main"
+# Until cohort-kit#12 lands, from the branch rather than main: this
+# curriculum uses by_hand, verify, ai_mode, module, at_home and
+# parent_notes, and --home does not exist on main yet.
+pip install "cohortkit @ git+https://github.com/alpibrusl/cohort-kit@claude/book-portal-app-proposal-zu2i02"
 
 cohortkit check cohort --book-path .              # gates CI
 
@@ -26,6 +29,14 @@ cohortkit build cohort --out build --book-path .              # handout + facili
 cohortkit build cohort --out build --book-path . --home       # family guide
 cohortkit build cohort --out build --book-path . --self-paced # self-paced handbook
 ```
+
+> **Why the branch, and not `main`.** Installing from `main` today does not
+> fail loudly, which is exactly the problem: `cohortkit build --home` errors,
+> but `cohortkit check` *passes* — the schema does not forbid unknown fields,
+> so all six are dropped silently. That is a green check on a curriculum
+> where nothing verified that a session has a hand-done phase. Use the branch
+> until [cohort-kit#12](https://github.com/alpibrusl/cohort-kit/pull/12) is
+> merged, then switch back.
 
 `--book-path .` embeds each session's real chapter text into the document,
 collapsed under that session. A child needs the one HTML file and nothing
