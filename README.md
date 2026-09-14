@@ -14,6 +14,11 @@ cohort/                 the curriculum  → cohortkit → four documents
 Nothing in `build/` is committed. The book is the source; the EPUB is an
 artifact. The curriculum is three YAML files; the handout is an artifact.
 
+> **Two licences.** The manuscript in `chapters/` is
+> [CC BY-NC 4.0](https://creativecommons.org/licenses/by-nc/4.0/); the cohort
+> curriculum, the fixtures and the tooling are [EUPL-1.2](LICENSE). GitHub
+> shows only the second; [`COPYING.md`](COPYING.md) is the authority.
+
 ## Build it
 
 ```bash
@@ -126,5 +131,13 @@ cheapest way to keep that promise is to hold nothing.
 
 ## Licence
 
-[EUPL-1.2](LICENSE), matching content-kit, cohort-kit, and the rest of the
-series.
+**Two licences**, the same split as the rest of the series. The manuscript in
+`chapters/` is [CC BY-NC 4.0](https://creativecommons.org/licenses/by-nc/4.0/)
+— share and adapt with credit, no commercial use. Everything else, including
+the cohort curriculum, the fixtures, the family guide and the tooling, is
+[EUPL-1.2](LICENSE), matching content-kit and cohort-kit. GitHub shows only the
+second; [`COPYING.md`](COPYING.md) is the authority on the split.
+
+In practice: an academy may charge fees and run this curriculum, and a parent
+may run it at home, without asking anyone. Selling the book's text is the thing
+the manuscript licence excludes.

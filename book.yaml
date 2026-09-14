@@ -40,5 +40,19 @@ front_matter: ["title_page", "copyright", "toc"]
 back_matter: []
 copyright:
   year: "2026"
-  license: "EUPL-1.2"
-  license_url: "https://eupl.eu/1.2/en/"
+  license: "CC BY-NC 4.0"
+  license_url: "https://creativecommons.org/licenses/by-nc/4.0/"
+  notice:
+    - >-
+      Written with the assistance of an AI agent, which is the only honest way
+      to write this particular book. Every claim in it is the author's to
+      defend.
+    - >-
+      This book describes an educational approach. It is not safeguarding,
+      child-protection or data-protection advice. Running a cohort with minors
+      carries obligations under local law — supervision, consent, and what may
+      be recorded about a child — and meeting them is the responsibility of
+      whoever runs it.
+    - >-
+      The manuscript is CC BY-NC 4.0; the cohort curriculum and the tooling in
+      this repository are EUPL-1.2. See COPYING.md.
