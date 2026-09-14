@@ -14,22 +14,10 @@ jobs:
         with:
           python-version: "3.11"
 
-      # cohortkit is pinned to a branch rather than @main on purpose, and it is
-      # temporary. This curriculum uses `by_hand`, `verify`, `ai_mode`, `module`,
-      # `at_home` and `parent_notes`, which land in cohort-kit#12 and are not on
-      # main yet. Pinning is not cosmetic: `cohortkit build --home` does not
-      # exist on main and would fail outright, and — worse — `cohortkit check`
-      # would *pass* on main while silently ignoring every one of those fields,
-      # so CI would report a green curriculum that nothing had actually checked.
-      #
-      # TODO: revert COHORTKIT_REF to `main` once cohort-kit#12 is merged.
-      # https://github.com/alpibrusl/cohort-kit/pull/12
       - name: Install the toolchain
-        env:
-          COHORTKIT_REF: claude/book-portal-app-proposal-zu2i02
         run: |
           pip install "content-kit-core @ git+https://github.com/alpibrusl/content-kit@main#subdirectory=packages/core"
-          pip install "cohortkit @ git+https://github.com/alpibrusl/cohort-kit@${COHORTKIT_REF}"
+          pip install "cohortkit @ git+https://github.com/alpibrusl/cohort-kit@main"
 
       - name: Check the curriculum against the book
         run: cohortkit check cohort --book-path .

@@ -14,14 +14,21 @@ cohort/                 the curriculum  → cohortkit → four documents
 Nothing in `build/` is committed. The book is the source; the EPUB is an
 artifact. The curriculum is three YAML files; the handout is an artifact.
 
+> **Two licences.** The manuscript in `chapters/` is
+> [CC BY-NC 4.0](https://creativecommons.org/licenses/by-nc/4.0/); the cohort
+> curriculum, the fixtures and the tooling are [EUPL-1.2](LICENSE). GitHub
+> shows only the second; [`COPYING.md`](COPYING.md) is the authority.
+
+> **Requires cohort-kit 0.3+** — this curriculum uses `by_hand`, `verify`,
+> `ai_mode`, `module`, `at_home` and `parent_notes`, and `--home`. On an older
+> cohortkit `--home` errors and, less obviously, `check` *passes* while
+> silently dropping all six.
+
 ## Build it
 
 ```bash
 pip install "content-kit-core @ git+https://github.com/alpibrusl/content-kit@main#subdirectory=packages/core"
-# Until cohort-kit#12 lands, from the branch rather than main: this
-# curriculum uses by_hand, verify, ai_mode, module, at_home and
-# parent_notes, and --home does not exist on main yet.
-pip install "cohortkit @ git+https://github.com/alpibrusl/cohort-kit@claude/book-portal-app-proposal-zu2i02"
+pip install "cohortkit @ git+https://github.com/alpibrusl/cohort-kit@main"
 
 cohortkit check cohort --book-path .              # gates CI
 
@@ -29,14 +36,6 @@ cohortkit build cohort --out build --book-path .              # handout + facili
 cohortkit build cohort --out build --book-path . --home       # family guide
 cohortkit build cohort --out build --book-path . --self-paced # self-paced handbook
 ```
-
-> **Why the branch, and not `main`.** Installing from `main` today does not
-> fail loudly, which is exactly the problem: `cohortkit build --home` errors,
-> but `cohortkit check` *passes* — the schema does not forbid unknown fields,
-> so all six are dropped silently. That is a green check on a curriculum
-> where nothing verified that a session has a hand-done phase. Use the branch
-> until [cohort-kit#12](https://github.com/alpibrusl/cohort-kit/pull/12) is
-> merged, then switch back.
 
 `--book-path .` embeds each session's real chapter text into the document,
 collapsed under that session. A child needs the one HTML file and nothing
@@ -126,5 +125,13 @@ cheapest way to keep that promise is to hold nothing.
 
 ## Licence
 
-[EUPL-1.2](LICENSE), matching content-kit, cohort-kit, and the rest of the
-series.
+**Two licences**, the same split as the rest of the series. The manuscript in
+`chapters/` is [CC BY-NC 4.0](https://creativecommons.org/licenses/by-nc/4.0/)
+— share and adapt with credit, no commercial use. Everything else, including
+the cohort curriculum, the fixtures, the family guide and the tooling, is
+[EUPL-1.2](LICENSE), matching content-kit and cohort-kit. GitHub shows only the
+second; [`COPYING.md`](COPYING.md) is the authority on the split.
+
+In practice: an academy may charge fees and run this curriculum, and a parent
+may run it at home, without asking anyone. Selling the book's text is the thing
+the manuscript licence excludes.
