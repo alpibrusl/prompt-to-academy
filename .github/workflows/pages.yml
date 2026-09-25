@@ -27,14 +27,10 @@ jobs:
       - name: Install the toolchain
         run: |
           pip install "content-kit-core @ git+https://github.com/alpibrusl/content-kit@main#subdirectory=packages/core"
-          pip install "bookkit @ git+https://github.com/alpibrusl/content-kit@main#subdirectory=packages/bookkit"
           pip install "cohortkit @ git+https://github.com/alpibrusl/cohort-kit@main"
 
       - name: Check the curriculum against the book
         run: cohortkit check cohort --book-path .
-
-      - name: Render the book
-        run: bookkit build --book-dir . --format html
 
       - name: Render the cohort documents
         run: |
@@ -46,7 +42,7 @@ jobs:
         run: |
           mkdir -p _site
           cp site/index.html _site/index.html
-          cp build/prompt-to-judgement.html _site/book.html
+          python3 site/build_reader.py
           cp build/handout.html _site/handout.html
           cp build/facilitator-guide.html _site/facilitator-guide.html
           cp build/family-guide.html _site/family-guide.html
