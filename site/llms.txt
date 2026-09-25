@@ -1,0 +1,14 @@
+# Prompt to Academy
+
+> A book, and the cohort curriculum derived from it, teaching children to use AI productively and safely by first making them do the thing themselves — small and by hand — and only then letting them delegate it and check the result.
+
+## Book
+
+- [Prompt to Academy](https://alpibrusl.github.io/prompt-to-academy/book.html): The full manuscript, twelve chapters, teaching a generation to specify, to check, and to answer for work it did not build.
+
+## The Builders cohort (ages 13-15)
+
+- [Student handout](https://alpibrusl.github.io/prompt-to-academy/handout.html): For the child working through a facilitated cohort.
+- [Facilitator guide](https://alpibrusl.github.io/prompt-to-academy/facilitator-guide.html): For a practitioner running a cohort, with notes and planted traps.
+- [Family guide](https://alpibrusl.github.io/prompt-to-academy/family-guide.html): For one adult and one child running the whole thing at home, no cohort or fee required.
+- [Self-paced handbook](https://alpibrusl.github.io/prompt-to-academy/self-paced-handbook.html): For a reader going through it alone, traps tucked behind a spoiler.
