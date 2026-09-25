@@ -34,6 +34,34 @@ That is a question you can actually answer. Go back to your own words. Find the 
 
 This reframe is most of the skill. "Check the answer" is advice nobody can act on. "Find the decisions you left open, and go look at what was chosen" is a procedure, and it terminates.
 
+## A worked case: the shelf
+
+Concrete beats abstract, so here is the whole thing once, start to finish, on something small enough to hold in your head.
+
+The brief: *"We have one shelf of books in the room. People take them and mostly bring them back. Right now nobody can tell what is on it without walking over. Make something that fixes that."*
+
+A first spec, written after ten minutes of thought, might say: list every book with title and author; mark a book "out" when someone takes it, with their name; mark it "in" when it comes back; sort alphabetically; show a count; work on a phone; handle the empty shelf.
+
+Hand that to an agent. What comes back is, by every measure the spec supplies, correct. Every line checked off. Six test cases passing — empty shelf, one book, many books, a book taken out, a book returned, two books sharing a title. The tool works. It is ready to use.
+
+Now run the reflex. *What did I not specify, and what did it choose?*
+
+Go back to the spec. It never said who is allowed to mark a book "in" — so the tool let anyone do it, including someone who never had the book, and including someone marking it back before actually returning it. It never said what happens if two people try to take the last copy at the same moment — so the tool does not handle that at all, because nothing asked it to. And it never said how a book gets *onto* the list in the first place, which is not an edge case — it is the ordinary first day of using the thing, and the spec walked straight past it.
+
+None of that is the agent's fault, and none of it shows up by re-reading the output. It shows up by re-reading the *spec*, and asking, for every decision the finished tool is now visibly making, whether that decision was ever actually yours to make.
+
+The second spec adds four sentences the first one did not have: who may change a book's status; what happens on a simultaneous claim; how new books get added, and by whom; and what "the count" means while a claim is being contested. None of those sentences would have occurred to the person who wrote the first version — they only became visible by watching a correct-looking answer and asking what it had quietly decided.
+
+That is the whole method, run once on something small, so that it is recognisable later on something that is not.
+
+## When the thing is not small
+
+The shelf is six requirements and a handful of gaps. A five-hundred-line program or a ten-page report has hundreds of places where the spec ran out, and reading the whole output line by line looking for each one does not scale — worth admitting plainly, because the method above can sound tidier than it actually is at that size.
+
+The partial fix is to stop relying on your own re-reading and ask for the list directly. Before accepting anything built at that scale, ask the agent to state, separately from the result, every place it made a judgement call the specification did not settle — every default it picked, every case it assumed would not occur, every ambiguity it resolved one way rather than another. That list is not guaranteed to be complete; an agent does not always know which of its choices were choices. But it is a much shorter document than the output, it is aimed at exactly the right question, and reading forty stated assumptions is a task you can actually do in a way that re-deriving forty unstated ones from the output alone is not.
+
+This does not make the problem small. It turns it into a list instead of a search, which is the difference between a task you can finish and one you only feel bad about not finishing.
+
 ## Verification only checks what you asked for
 
 There is a specific trap that this chapter is really about, and it recurs in every chapter after it.

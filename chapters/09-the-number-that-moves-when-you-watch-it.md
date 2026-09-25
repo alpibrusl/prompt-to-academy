@@ -61,3 +61,9 @@ Before you start, set aside some of your data — or some of your people — and
 Whatever you tuned, you tuned to the data you could see. The holdout is the only part that can tell you whether what you found is real or whether you have simply memorised the noise in front of you.
 
 If the result survives the holdout, it is probably real. If it does not, you have learned something genuinely valuable and slightly painful, which is the only kind of learning this book is really about.
+
+## Where this comes from
+
+Stopping a trial as soon as it looks good, testing many things and reporting the interesting one, splitting the data until something appears — these have names in statistics older than any of the tools this book is about. Optional stopping. Multiple comparisons. People have been catching each other doing this, and occasionally doing it to themselves, for as long as there have been experiments.
+
+The reason it belongs in a book about delegating to a machine is not that the machine invented the temptation. It is that the machine has made every one of those bad moves available at the speed of a follow-up question. Asking "what if we just look at the younger group" used to take a week of re-analysis. Now it takes one sentence, and the answer comes back before the part of you that would have hesitated has had time to.
