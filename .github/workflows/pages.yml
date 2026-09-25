@@ -1,0 +1,69 @@
+name: pages
+
+on:
+  push:
+    branches: ["main"]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: false
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Install the toolchain
+        run: |
+          pip install "content-kit-core @ git+https://github.com/alpibrusl/content-kit@main#subdirectory=packages/core"
+          pip install "bookkit @ git+https://github.com/alpibrusl/content-kit@main#subdirectory=packages/bookkit"
+          pip install "cohortkit @ git+https://github.com/alpibrusl/cohort-kit@main"
+
+      - name: Check the curriculum against the book
+        run: cohortkit check cohort --book-path .
+
+      - name: Render the book
+        run: bookkit build --book-dir . --format html
+
+      - name: Render the cohort documents
+        run: |
+          cohortkit build cohort --out build --book-path .
+          cohortkit build cohort --out build --book-path . --home
+          cohortkit build cohort --out build --book-path . --self-paced
+
+      - name: Assemble the site
+        run: |
+          mkdir -p _site
+          cp site/index.html _site/index.html
+          cp build/prompt-to-judgement.html _site/book.html
+          cp build/handout.html _site/handout.html
+          cp build/facilitator-guide.html _site/facilitator-guide.html
+          cp build/family-guide.html _site/family-guide.html
+          cp build/self-paced-handbook.html _site/self-paced-handbook.html
+
+      - uses: actions/configure-pages@v5
+
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: _site
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - id: deployment
+        uses: actions/deploy-pages@v4
