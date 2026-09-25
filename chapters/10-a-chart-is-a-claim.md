@@ -61,3 +61,9 @@ Then argue about which is the fairest representation.
 That argument is the actual skill. It has no formula and no correct answer, and the ability to have it well — to say *this one is technically accurate and will mislead the reader, and here is why* — is not something that can be delegated, because it is a judgement about an audience rather than a fact about the data.
 
 It is also, usefully, the best possible preparation for reading a chart that somebody else made on purpose.
+
+## Where this comes from
+
+Truncated axes, cherry-picked windows, raw counts standing in for rates — every dishonest chart in this chapter is a technique with its own long history in newspapers, annual reports, and advertising, well before anyone could generate one by typing a sentence.
+
+What has changed is the cost of producing one. A misleading chart used to take a person who understood the data and chose to mislead with it. Now it can be the accidental output of asking for "a chart of this" with no further thought, because the tool has to make the same four choices — the axis, the window, the comparison, the omission — whether or not anyone asked it to make them honestly. The dishonesty got cheaper to produce by accident, not just on purpose, which is the only thing about this chapter that is actually new.

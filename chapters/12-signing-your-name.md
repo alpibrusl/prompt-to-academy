@@ -52,6 +52,20 @@ That moment — the one where you open your mouth and discover there is nothing 
 
 It is also, not coincidentally, the only assessment that still means anything. Anything that can be produced unsupervised can be produced by something other than you, which makes it evidence about the work and not about the person. A defence is evidence about the person. So is teaching it to someone younger, which is the cheapest way ever discovered to find out whether you actually understood something.
 
+## Some things are not yours to delegate
+
+Everything so far has assumed the question is *how* to delegate well — what to specify, what to check, what account to give afterwards. There is a prior question, and it is easy to skip because the rest of this book has been so focused on technique: **should this be delegated at all, however carefully?**
+
+Some things do not become acceptable to hand off just because you would check the result carefully afterwards.
+
+Other people's private information going anywhere it does not need to go is one — a medical record, a home address, a grade, a password, fed to a system so that it can help draft something, is now somewhere it cannot be recalled from, and no amount of careful checking of the *output* undoes that.
+
+A decision that cannot be undone if it is wrong is another — who gets an interview, who gets flagged, who gets removed, decided by a system whose reasoning you cannot fully inspect, acted on before anyone has a chance to say *that was wrong, undo it*.
+
+Underneath both is the general case: anything where "I checked what I could, and here is what I did not" is not an acceptable answer to the person it affects. Most of this book has argued that a careful, honest account of partial checking is good enough, because it is what everyone competent actually gives. It is good enough for a shelf tracker. It is not good enough for a diagnosis, a sentence, or a decision about somebody's safety, because the cost of the part you did not check is no longer yours alone to bear.
+
+None of this is a rule with a bright line, and this book will not pretend to give you one — it depends on what is at stake, who bears the cost of being wrong, and whether the person affected ever gets to ask you the question this whole book has been building toward. But the question itself has to be asked *before* the specifying and the checking begin, because by the time you are holding a careful, well-verified result, it is too late to ask whether you should have built it at all.
+
 ## What this was all for
 
 Here is the whole book, compressed into one test.

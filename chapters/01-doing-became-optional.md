@@ -36,6 +36,8 @@ That combination is the thing this book exists to prevent. Not AI use. Not short
 
 It helps to be precise about what is now rare, because the honest answer is not "the ability to produce things".
 
+It is also not the ability to phrase a request well. Wording a prompt so that a system understands it is a real skill, and it is not what this book is about, and it is not what turns out to be scarce — a query that is technically well-formed can still be pointed at the wrong target, and being fluent in asking is no protection against being wrong about what you asked. Put it a different way: whatever this book's title suggests, it will not teach you to write better prompts. It exists to teach the parts on either side of the prompt — the wanting, precisely enough to state it, and the checking, precisely enough to trust it.
+
 What is rare is the ability to say what you actually want, in enough detail that a competent stranger could build it and you would recognise whether they had.
 
 What is rare is knowing what "correct" would look like *before* you see the answer — because after you see it, it is almost impossible to un-see, and everything the answer says starts to sound like what you meant.

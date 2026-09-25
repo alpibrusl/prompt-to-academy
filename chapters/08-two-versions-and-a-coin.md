@@ -59,3 +59,9 @@ If B is enormously better than A, a few dozen observations will show it — the 
 So decide in advance how big a difference would actually matter to you, and work out whether you can realistically collect enough observations to see one. If you cannot, the honest thing is to say the experiment cannot answer the question — before running it, rather than after, when the temptation to find something will be much stronger.
 
 That temptation is the subject of the next chapter, and it is the one that catches nearly everybody.
+
+## Where this comes from
+
+None of this is new, and it is worth saying so. Randomising who sees which version, deciding your sample size and your threshold in advance, treating a coin flip as the honest model of what luck alone produces — this is randomised comparison, and it is roughly a century old. Ronald Fisher was doing it on agricultural plots before anyone had a computer to do it for him.
+
+What is new is not the method. It is how easy it now is to skip it. A machine will happily generate two versions of anything in seconds, and generate a plausible-sounding verdict about which one is better, without ever mentioning that nobody randomised, nobody fixed a sample size, and nobody wrote down a threshold in advance. The technique was never obsolete. It has simply become much easier to bypass, which is exactly why it is taught here rather than assumed.
