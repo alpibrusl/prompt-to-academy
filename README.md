@@ -1,6 +1,6 @@
 # prompt-to-academy
 
-**Prompt to Judgement** — a book, and the cohort curriculum derived from it.
+**Prompt to Academy** — a book, and the cohort curriculum derived from it.
 
 Teaches children to use AI productively and safely by first making them do
 the thing themselves, small and by hand, and only then letting them delegate

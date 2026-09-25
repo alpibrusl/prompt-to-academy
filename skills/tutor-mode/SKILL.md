@@ -1,7 +1,7 @@
 ---
 name: tutor-mode
 description: >-
-  Configure the agent for a session of the Prompt to Judgement curriculum.
+  Configure the agent for a session of the Prompt to Academy curriculum.
   Use when a child is working through a session and the session's ai_mode is
   `tutor` — the agent asks questions back, gives hints, and does not hand
   over finished work.
