@@ -66,6 +66,22 @@ Underneath both is the general case: anything where "I checked what I could, and
 
 None of this is a rule with a bright line, and this book will not pretend to give you one — it depends on what is at stake, who bears the cost of being wrong, and whether the person affected ever gets to ask you the question this whole book has been building toward. But the question itself has to be asked *before* the specifying and the checking begin, because by the time you are holding a careful, well-verified result, it is too late to ask whether you should have built it at all.
 
+## The toy model: the long chain
+
+Before signing your name to something, it helps to have one number in your head that no amount of careful checking of the final result will give you.
+
+Suppose a delegated job has twenty steps, and each step is right 95 times out of 100. The chance that all twenty are right is 0.95 multiplied by itself twenty times: about 36%. Nearly two times in three, something in there is wrong. At 99% per step it is about 82%. At 95% per step, after only fourteen steps, the whole job is already more likely wrong than right.
+
+That is the model: **a job of *k* steps, each right with probability *p*, is entirely right with probability *p* multiplied by itself *k* times — and a check that catches mistakes after a step starts the count again from there.**
+
+It explains Chapter 1's warning about the machine that is right ninety times in a row. Right ninety times in a row, step by step, is still not right at the end of a long enough chain.
+
+What it leaves out, on purpose: that steps are not truly independent, which changes the number but not the lesson that length works against you; that some mistakes are harmless, which is exactly what Chapter 11 says checking cannot see and a specification has to decide; and that checks miss things, which is the same as a longer chain.
+
+Use it before you sign. Count the steps in what you handed off. Guess how reliable each one is. Write down the chance the whole thing is right, and decide where the checks go — before you see the result, because afterwards it will look fine.
+
+To know whether you own it: you can afford two checks on a twenty-step job. Where do they go, and why there?
+
 ## What this was all for
 
 Here is the whole book, compressed into one test.
@@ -74,7 +90,7 @@ Hand someone a confident result. A number, a conclusion, a finished piece of wor
 
 If they ask **how do you know?** — and then **what would have to be true for that to be wrong?** — and can tell whether the answers they get are any good —
 
-then everything in these chapters has landed. Not because those two questions are magic. Because asking them, and meaning them, and being able to evaluate the response, requires all of it: knowing what a specification is, knowing what verification can and cannot reach, knowing what a fair comparison looks like, knowing that a chart is a claim, and having been wrong yourself often enough to expect that anyone might be.
+then everything in these chapters has landed. Not because those two questions are magic. Because asking them, and meaning them, and being able to evaluate the response, requires all of it: holding a small model of the problem firmly enough to predict with, knowing what a specification is, knowing what verification can and cannot reach, knowing what a fair comparison looks like, knowing that a chart is a claim, and having been wrong yourself often enough to expect that anyone might be.
 
 The person who asks those questions is not sceptical of the tools. They use them constantly, for nearly everything, and they get far more done than someone who does not.
 

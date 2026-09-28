@@ -67,3 +67,17 @@ It is also, usefully, the best possible preparation for reading a chart that som
 Truncated axes, cherry-picked windows, raw counts standing in for rates — every dishonest chart in this chapter is a technique with its own long history in newspapers, annual reports, and advertising, well before anyone could generate one by typing a sentence.
 
 What has changed is the cost of producing one. A misleading chart used to take a person who understood the data and chose to mislead with it. Now it can be the accidental output of asking for "a chart of this" with no further thought, because the tool has to make the same four choices — the axis, the window, the comparison, the omission — whether or not anyone asked it to make them honestly. The dishonesty got cheaper to produce by accident, not just on purpose, which is the only thing about this chapter that is actually new.
+
+## The toy model: how big luck is
+
+Every chart in this part eventually shows a difference between two things, and Chapters 8 and 9 were about whether that difference is real. This is the smallest model that answers it well enough to predict with.
+
+Show poster A to 100 people and poster B to 100 different people, and count how many sign up. Even if the posters are identical, the two percentages will not match. Luck alone routinely produces gaps of up to about 10 percentage points between groups of 100.
+
+The model: **with *n* people in each group, a gap smaller than about 100 ÷ √*n* points is the kind of gap luck produces all the time.** Twenty-five per group, and luck makes 20-point gaps. Four hundred per group, 5 points. Two thousand five hundred, 2 points.
+
+Two things follow that the chart will never tell you. A real difference keeps roughly its size as you collect more people; a lucky one shrinks, because 100 ÷ √*n* shrinks. And if you look at the running totals again and again and stop when the gap looks big, you are no longer comparing one gap with the threshold — you are picking the biggest of many, and luck supplies a big one eventually. That is Chapter 9's mistake, in one line: decide *n* before you look.
+
+What it leaves out, on purpose: sign-up rates far from half, which make the luck a little smaller but do not change its shape; groups of different sizes; and the exact tests a statistician would use, which sharpen the number but agree with the model about what matters.
+
+To know whether you own it: if you want to detect a difference of 2 points, roughly how many people do you need in each group — and is that worth it?

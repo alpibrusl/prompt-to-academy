@@ -1,6 +1,6 @@
-# Running It on the Toy
+# Running It on the Dummy
 
-The toy case is built. The expected answer is written down, on paper, where it cannot revise itself. Now run the method.
+The dummy is built. The expected answer is written down, on paper, where it cannot revise itself. Now run the method.
 
 Four things can happen, and each one means something different.
 
@@ -30,7 +30,7 @@ Write down what you believed and what is actually true. That note is worth more 
 
 ## It agrees, and you are both wrong
 
-This is the dangerous one, and it is why the previous chapter insisted the toy case contain something awkward.
+This is the dangerous one, and it is why the previous chapter insisted the dummy contain something awkward.
 
 You expected 42 because you misunderstood what the method does. The method returned 42 because it does the thing you misunderstood it to do. Everything agrees. Everything is wrong. The test passes and certifies a shared misconception.
 
@@ -40,7 +40,7 @@ The second one is remarkably effective, and it is the real argument for doing th
 
 ## Then, and only then, the real data
 
-Once the toy case behaves, run the real thing. And the moment you have a real answer, you have a new obligation: the real answer has to be sanity-checked against something outside the method.
+Once the dummy behaves, run the real thing. And the moment you have a real answer, you have a new obligation: the real answer has to be sanity-checked against something outside the method.
 
 Is it the right order of magnitude? Does the number of rows that came out make sense given the number that went in? Is anything suspiciously round? Is anything suspiciously perfect?
 
@@ -50,7 +50,7 @@ A suspicious result is a signal to look harder, not to celebrate. This is a stra
 
 ## Keeping the record
 
-Every toy case you build is reusable. Keep them.
+Every dummy you build is reusable. Keep them.
 
 A folder of small cases with known answers is the most valuable thing you accumulate doing this work. It grows every time something surprises you — and a case built from a real surprise is worth ten cases built from imagination, because it encodes a specific way the world turned out to be more complicated than you assumed.
 

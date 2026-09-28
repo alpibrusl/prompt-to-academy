@@ -53,3 +53,19 @@ There is usually a version of a task that *produces* an answer and a version tha
 Whenever you have the choice, take the version that produces. Not because the reporting version is usually wrong — it usually is not — but because when it is wrong you have no way to find out, and a method whose failures are undetectable is not a method you can build on.
 
 And when you cannot have the produced version, say so. Out loud, in the record: *this part was not computed, it was asserted, and I did not check it.* An honest unverified claim is a perfectly respectable thing to hand someone. An unverified claim presented as a verified one is not, and the difference is entirely in whether you said which it was.
+
+## The toy model: open decisions
+
+The shelf brief from Chapter 3 leaves at least five decisions to whoever builds it: what the "something" is, what "on the shelf" means for a book that is out on loan, who uses it, what happens when two people update it at once, and whether books that do not come back are a problem to solve or a fact to live with.
+
+Give each decision just two reasonable answers, and there are 2 × 2 × 2 × 2 × 2 = 32 different things that all match the brief. Every one of them passes. One of them is what you wanted.
+
+That is the whole model: **a specification that leaves *n* decisions open, each with *k* reasonable answers, is satisfied by *k* multiplied by itself *n* times different builds.** Add one more open decision and the number doubles.
+
+An agent does not choose among those builds at random. It tends to pick the most common answer to each open decision. So it matches you exactly as often as what you want is typical — which is why Chapter 3's vague specification usually worked, and why it fails, silently, on the one decision where you wanted something unusual.
+
+What the model leaves out, on purpose: that some combinations of answers are impossible, which lowers the count but not how fast it grows; that a builder could ask you a question, which agents mostly do not; and that some wrong guesses cost far more than others, which is the subject of the last part of this book.
+
+Use it before you delegate. List the open decisions. Mark the ones where your answer is unusual. Predict, in writing, where the agent will guess wrong. Those are the decisions your specification has to close, and you can only close a decision you know exists — which is the honest reason to go and learn how the thing you are asking for actually works.
+
+To know whether you own this model: if the builder were allowed to ask you exactly one question, which one would you want it to be?
