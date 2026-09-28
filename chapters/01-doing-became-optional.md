@@ -56,6 +56,8 @@ Everything that follows starts with one move, repeated.
 
 Not the whole thing. A tiny version — five rows of data, twenty lines of code, one paragraph. Small enough to finish in ten minutes. Real enough to fail.
 
+Call that tiny version a **dummy**: small enough to do by hand, and built before you understand the problem well enough to know what it leaves out.
+
 Then, and only then, delegate it. And because you have felt where it goes wrong, you now have a question to ask the result, and the question is a memory rather than an item on a checklist.
 
 That ordering is not a preference. It is where the method starts. A checklist of verification questions handed to someone who has never been burned is a ritual — they will run it, it will pass, and they will have learned to perform diligence without acquiring any. The failure has to come first, and it has to be theirs.
@@ -64,9 +66,11 @@ The chapters after this one each take one such failure and walk it: what to do b
 
 ## What you are aiming at
 
-The small first attempt is not the goal. It is small because you do not yet know what matters, and most of what it leaves out, it leaves out by accident.
+The dummy is not the goal. It is small because you do not yet know what matters, and most of what it leaves out, it leaves out by accident.
 
 The goal is a different small thing, and it comes last. Call it a **toy model**: the smallest description of a problem that still behaves like the problem. Three or four quantities, a rule connecting them, and nothing else — and everything that was left out, left out on purpose, for a reason you can say aloud.
+
+The two are easy to confuse, because both fit in your head. They are small for opposite reasons. A dummy leaves things out because you have not noticed them yet. A toy model leaves things out because you have checked that they do not matter. Each part of this book starts with a dummy and ends with a toy model, and in between sits the real, full-sized thing — usually built by an agent — whose disagreements with what you expected are what turn the one into the other.
 
 Here is one. A class of thirty takes a test marked out of ten, and the scores are mostly around six. One score was typed as 100 instead of 10. What is the average now?
 
@@ -88,7 +92,7 @@ That is what this book relies on to make the knowledge worth having. Nobody is a
 
 ## Where each part ends
 
-Each of the four parts of this book ends in one toy model, small enough to work by hand and specific enough to predict with:
+Each of the four parts of this book ends in one toy model, in its last chapter, small enough to work by hand and specific enough to predict with:
 
 - how many different things could be built that all match what you wrote;
 - how a few bad rows move a summary, and which ones you would never see;

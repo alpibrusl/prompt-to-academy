@@ -1,8 +1,8 @@
-# When the Toy Passes Anyway
+# When the Dummy Passes Anyway
 
 A method that passes its known-answer test can still be wrong about the real data, and the reasons are not exotic. They are the ordinary reasons, and they are worth having names for, because a thing with a name is a thing you can look for.
 
-## The toy was clean and the world is not
+## The dummy was clean and the world is not
 
 You built five tidy rows. The real data has a blank where a number should be, a date written three different ways, a duplicate that arrived twice because someone pressed submit twice, and one row where a person typed their age as 999.
 
@@ -12,11 +12,11 @@ The fix is not cleverness. It is to look at the real data before trusting any re
 
 This takes two minutes and is skipped almost universally, because it feels like it is not the real work. It is the real work.
 
-## The toy was small and size changes the answer
+## The dummy was small and size changes the answer
 
 Some things behave differently at scale in ways a five-row case cannot show. A method that is correct but takes an hour per row. A rounding error that is invisible once and ruinous a million times. A rule that made sense when there were three categories and falls apart at three thousand.
 
-Small cases test correctness. They do not test what happens when the thing meets its actual volume, and you should not let a passing toy case persuade you that they do.
+Small cases test correctness. They do not test what happens when the thing meets its actual volume, and you should not let a passing dummy persuade you that they do.
 
 ## The answer leaked into the question
 
@@ -47,6 +47,22 @@ The method was right. The data was clean. Nothing leaked. And it is wrong now, b
 Anything learned from the past assumes the future resembles it. Usually true. Occasionally, expensively, not — and the moments when it stops being true are exactly the moments that matter, because that is what a change is.
 
 Nothing in the method will tell you this has happened. There is no internal signal. The only defence is external: keep checking a known-answer case over time, and notice when an answer that used to be right stops being right.
+
+## The toy model: loud rows
+
+Every item in this chapter so far is something a dummy left out by accident. Here is the smallest model of the first one that still behaves like it.
+
+Forty people log their daily screen time in minutes, and most of them are somewhere around 180. One holds a key down too long and types 1800. What happens to the average?
+
+An average shares every row's size equally among all the rows. The bad row is 1620 too large, and there are forty rows, so the average goes up by 1620 ÷ 40, about 40. It comes out near 220 instead of near 180.
+
+That is the model: **a row that is wrong by *M*, in a list of *N*, moves the average by about *M* ÷ *N*.** The middle value — the median — barely moves at all until nearly half the rows are bad.
+
+Notice what it predicts. 220 minutes is not absurd. It looks like a slightly heavier group of users. Nobody glancing at it would stop, unless they had written down "about 180" first. And a blank read as zero would pull the average down by 180 ÷ 40, about 4.5 minutes, which no glance at the result will ever catch. The model states its own limit: **big errors can be caught at the answer, if you predicted one; small errors can only be caught in the data.**
+
+What it leaves out, on purpose: the shape of the rest of the numbers, which does not change *M* ÷ *N*; and which summary is the right one to report, which depends on the question, not the data.
+
+To know whether you own it: in the same list, what would ten blanks read as zero do to the average — and would you notice?
 
 ## What to do with this list
 

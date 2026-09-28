@@ -42,7 +42,7 @@ and a session that dropped it looks exactly like one that never had it.
 |---|---|---|
 | 1 | `none` | the spec fails against a person first, visibly |
 | 2–3 | `answer` | unlocked; the hand-done phase is behind them |
-| 4 | `none` | the toy case must be built by someone who knows the answer |
+| 4 | `none` | the dummy must be built by someone who knows the answer |
 | 5–6 | `answer` | |
 | 7 | `none` | forty coin flips, by hand, no substitutes |
 | 8 | `tutor` | an agent in answer mode explains optional stopping and the experience is lost |

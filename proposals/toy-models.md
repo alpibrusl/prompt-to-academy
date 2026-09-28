@@ -1,13 +1,24 @@
 # Proposal: four toy models, one per module
 
-Status: **draft for review**. Nothing in `cohort/` has changed yet. Only
-Chapter 1 has been edited, to state the new goal (see "What you are aiming
-at", "Why anyone would bother" and "Where each part ends").
+Status: **draft for review**. In the book:
+
+- Chapter 1 defines **dummy** (the small first attempt, small because you
+  don't yet know what matters) and **toy model** (the destination, small
+  because you do), and states the new goal.
+- "Toy case" is now "dummy" throughout Chapters 5–7, including two chapter
+  titles and their file names, sessions 4–6, and `cohort/README.md`.
+- Each part's last chapter ends with its toy model: Chapter 4 (open
+  decisions), Chapter 7 (loud rows), Chapter 10 (how big luck is), Chapter
+  12 (the long chain). The chapter versions use their own numbers, not the
+  fixture's, so students aren't handed answers the sessions want them to
+  find.
+
+The sessions' toy blocks, the rubric and the capstone are not changed yet.
 
 ## The idea in one paragraph
 
-The course currently starts from a small attempt made by hand, and that stays
-as the entry move. What changes is the destination. Each module now ends in a
+The course starts from a **dummy**, a small attempt made by hand, and that
+stays as the entry move. What changes is the destination. Each module now ends in a
 **toy model**: the smallest description of a problem that still behaves like
 the problem, where every omission is deliberate and can be defended. The small
 first attempt and the toy model are both small, but for opposite reasons. The
@@ -226,13 +237,8 @@ thirds. Either answer is defensible, and the defence is the test.
 - Every one replaces "is this right?" with a question the student can go and
   answer.
 
-## What adopting this would change (not done in this draft)
+## What adopting this would still change
 
-- **Vocabulary.** Chapters 5–7 and sessions 4–6 say "toy case" for the small
-  known-answer case, which is the *entry* end. With "toy model" as the
-  destination, one word would name both ends. Proposed rename: "small case"
-  (e.g. Chapter 6 "Running It on the Small Case", Chapter 7 "When the Small Case
-  Passes Anyway").
 - **Sessions.** The last session of each module (3, 6, 9, 12) gets a toy block:
   work the toy by hand, write down the prediction, collide with the fixture.
 - **Rubric.** A dimension for *predicts before running* and *can defend what

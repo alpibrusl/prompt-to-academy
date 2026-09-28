@@ -229,7 +229,7 @@ sessions:
       and can say which awkward thing the case deliberately contains.
     facilitator_notes: >-
       No agent today, and children who have had two sessions of answer mode
-      will push on this. Hold it. The whole point is that the toy case is
+      will push on this. Hold it. The whole point is that the dummy is
       built by a person who knows what the answer should be, and that is the
       half that cannot be delegated.
       Watch for realistic-looking cases. Realistic is the enemy here — it
@@ -237,10 +237,10 @@ sessions:
       right".
 
   - number: 5
-    title: "Running it on the toy"
+    title: "Running it on the dummy"
     module: "The known-answer test"
     chapters: [6]
-    chapter_titles: ["Running It on the Toy"]
+    chapter_titles: ["Running It on the Dummy"]
     ai_mode: "answer"
     by_hand: >-
       Before any code runs: open `attendance.csv`, count the rows by eye, and
@@ -282,7 +282,7 @@ sessions:
         an absurd one.
       fixture_ref: "fixture/attendance.csv"
     checkpoint: >-
-      Has run the method on their own toy case before the real data, and can
+      Has run the method on their own dummy before the real data, and can
       name which of the four outcomes they got.
     facilitator_notes: >-
       40.38 is loud and will be caught in seconds. The duplicate row is the
@@ -293,10 +293,10 @@ sessions:
       session. Say so rather than rescuing it.
 
   - number: 6
-    title: "When the toy passes anyway"
+    title: "When the dummy passes anyway"
     module: "The known-answer test"
     chapters: [7]
-    chapter_titles: ["When the Toy Passes Anyway"]
+    chapter_titles: ["When the Dummy Passes Anyway"]
     ai_mode: "answer"
     by_hand: >-
       Take last week's cleaned attendance figure and, by hand, write the five
